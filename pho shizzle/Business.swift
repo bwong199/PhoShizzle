@@ -20,6 +20,7 @@ class Business: NSObject {
     let reviewCount: NSNumber?
     let rating: Double?
     let phoneNumber: String?
+    let mobileURL: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
@@ -82,6 +83,9 @@ class Business: NSObject {
         rating = dictionary["rating"] as? Double
         
         phoneNumber = dictionary["display_phone"] as? String
+        
+        mobileURL = dictionary["mobile_url"] as? String
+
     }
     
     class func businesses(array array: [NSDictionary]) -> [Business] {

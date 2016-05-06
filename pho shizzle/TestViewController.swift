@@ -34,6 +34,21 @@ var pho : Pho? = nil
     
     @IBOutlet weak var savePhoButton: UIButton!
     
+    @IBAction func openYelpReviews(sender: AnyObject) {
+        
+        if let url = NSURL(string: "\(pho!.mobileURL)") {
+            print(url)
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    
+    @IBAction func openZomatoReviews(sender: AnyObject) {
+        if let url = NSURL(string: "\(pho!.zURL)") {
+            UIApplication.sharedApplication().openURL(url)
+        }
+    }
+    @IBOutlet var openYelpReviews: UIButton!
+    
     @IBOutlet var testMapView: MKMapView!
     
     override func viewDidLoad() {
@@ -42,9 +57,16 @@ var pho : Pho? = nil
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        
+        print(pho?.latitude)
+        print(pho?.longitude)
+        print(pho?.mobileURL);
+        
         self.testTitleLabel.text = self.pho!.name
         self.phoneLabel.text = String(self.pho!.phoneNumber)
         self.addressLabel.text = self.pho!.address
+        
+        
         self.zomatoCount.text =   "\(self.pho!.votes) votes"
         
         self.yelpCount.text =  "\(String(self.pho!.yVotes)) votes"

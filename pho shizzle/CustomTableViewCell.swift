@@ -20,4 +20,7 @@ class CustomTableViewCell : UITableViewCell{
     @IBOutlet var googleStars: CosmosView!
     
     @IBOutlet var yelpStars: UIImageView!
+    
+    @IBOutlet var zomatoCount: UILabel!
+    @IBOutlet var yelpCount: UILabel!
 }

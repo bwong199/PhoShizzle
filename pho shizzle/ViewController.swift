@@ -145,16 +145,23 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if success {
                 for x in GlobalVariables.phoInfoList {
                     
+                    GlobalVariables.restLatitude = x.latitude
+                    GlobalVariables.restLongitude = x.longitude
+                    GlobalVariables.restAddress = x.address
+                    
                     // print("\(x.name) \(x.rating) \(x.gRating)")
                     
-                    Business.searchWithTerm(x.name, completion: { (businesses: [Business]!, error: NSError!) -> Void in
+                    let searchName = x.name.stringByReplacingOccurrencesOfString(" ", withString: "-")
+
+                    print(searchName)
+                    Business.searchWithTerm(searchName, sort: YelpSortMode.BestMatched, categories: ["vietnamese"], deals: false,  completion: { (businesses: [Business]!, error: NSError!) -> Void in
                         self.businesses = businesses
                         
                         if businesses != nil {
                         if let businesses = businesses  as? [Business] {
                             for business in businesses {
                                 
-                                //                                print(business.phoneNumber)
+//                                print(business)
                                 
                                 for x in GlobalVariables.phoInfoList {
                                     
@@ -167,6 +174,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                             x.phoneNumber = phoneNumber
                                             
                                         }
+                                        
+                                        x.mobileURL = business.mobileURL!
                                         
                                         x.yRating = Double(business.rating!)
                                         x.yVotes = Int(business.reviewCount!)
@@ -238,40 +247,53 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.title.text = "\(pho.name) "
 //        cell.subtitle.text = "Zomato: \(pho.rating)    Google: \(pho.gRating)    Yelp: \(pho.yRating)"
-        cell.zomatoStars.rating = Double(pho.rating)!
+//        cell.zomatoStars.rating = Double(pho.rating)!
      
-        
+
 
 //        if let yelpRating = pho.yRating as? Double {
 //            cell.yelpStars.rating = yelpRating
 //        }
         
-        switch(pho.yRating){
-        case (1):
-            cell.yelpStars.image = UIImage(named: "Yelp0")
-        case (1.5):
-            cell.yelpStars.image = UIImage(named: "Yelp1h")
-        case (2):
-            cell.yelpStars.image = UIImage(named: "Yelp2")
-        case (2.5):
-            cell.yelpStars.image = UIImage(named: "Yelp2h")
-        case (3):
-            cell.yelpStars.image = UIImage(named: "Yelp3")
-        case (3.5):
-            cell.yelpStars.image = UIImage(named: "Yelp3h")
-        case (4):
-            cell.yelpStars.image = UIImage(named: "Yelp4")
-        case (4.5):
-            cell.yelpStars.image = UIImage(named: "Yelp4h")
-        case (5):
-            cell.yelpStars.image = UIImage(named: "Yelp5")
-        default:
-            break;
-        }
         
-        if let googleRating = pho.gRating as? Double {
-           cell.googleStars.rating = googleRating
-        }
+     
+            
+            cell.zomatoStars.rating = Double(pho.rating)!
+            cell.zomatoCount.text = pho.votes
+            
+            switch(pho.yRating){
+            case (0):
+                cell.yelpStars.image = UIImage(named: "Yelp0")
+            case (1):
+                cell.yelpStars.image = UIImage(named: "Yelp1")
+            case (1.5):
+                cell.yelpStars.image = UIImage(named: "Yelp1h")
+            case (2):
+                cell.yelpStars.image = UIImage(named: "Yelp2")
+            case (2.5):
+                cell.yelpStars.image = UIImage(named: "Yelp2h")
+            case (3):
+                cell.yelpStars.image = UIImage(named: "Yelp3")
+            case (3.5):
+                cell.yelpStars.image = UIImage(named: "Yelp3h")
+            case (4):
+                cell.yelpStars.image = UIImage(named: "Yelp4")
+            case (4.5):
+                cell.yelpStars.image = UIImage(named: "Yelp4h")
+            case (5):
+                cell.yelpStars.image = UIImage(named: "Yelp5")
+            default:
+                break;
+                
+            }
+            cell.yelpCount.text = String(pho.yVotes)
+            
+            if let googleRating = pho.gRating as? Double {
+                cell.googleStars.rating = googleRating
+            }
+    
+
+
   
 
         

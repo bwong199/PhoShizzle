@@ -58,6 +58,12 @@ class DataFetch {
                                         continue
                                     }
                                     newPho.name = phoName
+                                    
+                                    guard let zomatoURL = restaurant["url"] as? String else{
+                                        continue
+                                    }
+                                    newPho.zURL = zomatoURL
+                                    
                                     guard let rating = (restaurant["user_rating"]!["aggregate_rating"] as? String) else{
                                         continue
                                     }
@@ -88,6 +94,9 @@ class DataFetch {
                                     var phoLatitudeD = Double(phoLatitude)
                                     var phoLongitudeD = Double(phoLongitude)
                                     
+                                    var missingLatitude : Double = 0
+                                    var missingLongitude : Double = 0
+                                    
                                     let geocoder = CLGeocoder()
                                     if phoLatitude == "0.0000000000" && phoLongitude == "0.0000000000" {
                                         geocoder.geocodeAddressString(phoAddress, completionHandler: {(placemarks, error) -> Void in
@@ -99,10 +108,16 @@ class DataFetch {
                                                 //                                                print("Geocoded first \(coordinates.latitude) \(coordinates.longitude)")
                                                 phoLatitudeD = coordinates.latitude
                                                 phoLongitudeD = coordinates.longitude
-                                                //                                                print("Geocoded second \(phoLatitudeD) \(phoLongitudeD)")
+                                                //                        
+                                                print("Geocoded second \(phoLatitudeD) \(phoLongitudeD)")
                                                 
-                                                newPho.latitude = phoLatitudeD!
-                                                newPho.longitude = phoLongitudeD!
+                                                missingLatitude = coordinates.latitude
+                                                missingLongitude = coordinates.longitude
+
+                                                newPho.latitude = missingLatitude
+                                                newPho.longitude = missingLongitude
+                                                
+                                                print("\(newPho.name) \(newPho.latitude) \(newPho.longitude)")
                                                 
                                                 let userLocation:CLLocation = CLLocation(latitude: GlobalVariables.userLatitude, longitude: GlobalVariables.userLongitude)
                                                 let phoLocation:CLLocation = CLLocation(latitude: phoLatitudeD!, longitude: phoLongitudeD!)
@@ -131,14 +146,14 @@ class DataFetch {
                                     
 //                                    print("\(phoName) - \(phoLatitudeD) \(phoLongitudeD)")
                                     
-                                    //                                    print("Pho Distance \(phoName) \(phoDistance)")
+//                                      print("Pho Distance \(phoName) \(newPho.latitude) \(newPho.longitude) \(newPho.distanceFromUser)")
                                     
                                     if !GlobalVariables.phoInfoList.contains(newPho){
                                         GlobalVariables.phoInfoList.append(newPho)
                                         
                                         GlobalVariables.phoInfoList.sortInPlace()
                                         
-                                        DataFetch().fetchGoogleData(phoName + phoAddress, address: phoAddress ){(success, error, results) in
+                                        DataFetch().fetchGoogleData(phoName, latitude: phoLatitudeD!, longitude: phoLongitudeD! ){(success, error, results) in
                                             if success {
                                                 
                                             } else {
@@ -188,13 +203,13 @@ class DataFetch {
         task.resume()
     }
     
-    func fetchGoogleData(phoPlace: String, address: String, completionHandler:(success: Bool, error: String?, results: [Pho]) -> Void){
+    func fetchGoogleData(phoPlace: String, latitude : Double, longitude : Double,  completionHandler:(success: Bool, error: String?, results: [Pho]) -> Void){
         //        print(phoPlace)
         //
         let urlParamter = phoPlace.stringByReplacingOccurrencesOfString(" ", withString: "%20")
         
         if let phoPlace = phoPlace as? String {
-            let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\(GlobalVariables.userLatitude)%2C\(GlobalVariables.userLongitude)&radius=10000&type=restaurant&keyword=\(urlParamter)&key=AIzaSyAtq_jKJ6O-pM-wwvwpCx1n31yjwcI2cPI")!
+            let url = NSURL(string: "https://maps.googleapis.com/maps/api/place/nearbysearch/json?&radius=10000&location=\(latitude),\(longitude)&type=restaurant&keyword=\(urlParamter)&key=AIzaSyAtq_jKJ6O-pM-wwvwpCx1n31yjwcI2cPI")!
             
             //            print(url)
             
@@ -216,7 +231,7 @@ class DataFetch {
                                         
                                         if let name = item["name"] as? String, let rating = item["rating"] as? Double, let phoAddress = item["vicinity"] as? String {
                                             
-                                            //                                            print("Google Rating \(name) \(rating)")
+//                                            print("Google Rating \(phoPlace) \(name) \(rating)")
                                             
                                             for x in GlobalVariables.phoInfoList {
                                                 

@@ -24,7 +24,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/ViewController.swift"
-                  timestampString = "484205554.089143"
+                  timestampString = "484255378.234499"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "0"
@@ -39,7 +39,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/ViewController.swift"
-                  timestampString = "484205554.089318"
+                  timestampString = "484255378.234741"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -54,7 +54,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/ViewController.swift"
-                  timestampString = "484205554.089446"
+                  timestampString = "484255378.234896"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "15"
@@ -87,11 +87,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pho shizzle/Business.swift"
-            timestampString = "482348833.921649"
+            timestampString = "484255376.994062"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "init(dictionary:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -135,11 +135,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pho shizzle/ViewController.swift"
-            timestampString = "484204739.745104"
+            timestampString = "484259417.217452"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "278"
-            endingLineNumber = "278"
+            startingLineNumber = "300"
+            endingLineNumber = "300"
             landmarkName = "tableView(_:cellForRowAtIndexPath:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -167,7 +167,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/DetailViewController.swift"
-                  timestampString = "484205554.093172"
+                  timestampString = "484255378.238511"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -182,7 +182,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/DetailViewController.swift"
-                  timestampString = "484205554.093306"
+                  timestampString = "484255378.23865"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -197,7 +197,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/DetailViewController.swift"
-                  timestampString = "484205554.093425"
+                  timestampString = "484255378.238778"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -212,7 +212,7 @@
                   moduleName = "pho shizzle"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/benwong/Desktop/IOS/Udacity-IOS-Capstone-Project-Pho-Shizzle-master-fixed/pho%20shizzle/DetailViewController.swift"
-                  timestampString = "484205554.093544"
+                  timestampString = "484255378.23892"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "28"
@@ -229,12 +229,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "pho shizzle/TestViewController.swift"
-            timestampString = "484206127.851193"
+            timestampString = "484261728.842643"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "viewWillAppear(_:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pho shizzle/YelpClient.swift"
+            timestampString = "484249884.733849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "searchWithTerm(_:completion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "pho shizzle/ViewController.swift"
+            timestampString = "484257909.585305"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "locationManager(_:didUpdateLocations:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

@@ -17,13 +17,14 @@ class Pho : Comparable{
     var phoneNumber = ""
     var rating = ""
     var votes = ""
+    var zURL = ""
     var distanceFromUser = 0.00
     var latitude = 0.00
     var longitude = 0.00
     var gRating = 0.00
     var yRating = 0.00
     var yVotes = 0
-    
+    var mobileURL = ""
     
     init(){
         
