@@ -21,11 +21,9 @@ class DetailViewController: UIViewController  {
     
     @IBOutlet var addressLabel: UILabel!
     
-    @IBOutlet var zomatoLabel: UILabel!
+
     
-    @IBOutlet var googleLabel: UILabel!
-    
-    @IBOutlet var yelpLabel: UILabel!
+
     
     @IBOutlet var mapView: MKMapView!
     
@@ -53,11 +51,11 @@ class DetailViewController: UIViewController  {
         self.phoneLabel.text = String(self.pho!.phoneNumber)
         self.addressLabel.text = self.pho!.address
         
-        self.zomatoLabel.text = "\(self.pho!.rating) - \(self.pho!.votes) reviews"
-        
-        self.googleLabel.text = "\(self.pho!.gRating)"
-        
-        self.yelpLabel.text = "\(self.pho!.yRating) - \(self.pho!.yVotes) reviews"
+//        self.zomatoLabel.text = "\(self.pho!.rating) - \(self.pho!.votes) reviews"
+//        
+//        self.googleLabel.text = "\(self.pho!.gRating)"
+//        
+//        self.yelpLabel.text = "\(self.pho!.yRating) - \(self.pho!.yVotes) reviews"
         
         let latitudeAnn:CLLocationDegrees = self.pho!.latitude
         let longitudeAnn:CLLocationDegrees = self.pho!.longitude

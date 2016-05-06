@@ -26,6 +26,16 @@
 		C535C0101CDB0E0A002A4A80 /* phoShizzleLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C535C00F1CDB0E0A002A4A80 /* phoShizzleLogo.jpg */; };
 		C54134251CBDDCAF0051B800 /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54134241CBDDCAF0051B800 /* DataFetch.swift */; };
 		C574CE0F1CC92CD1006C514A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C574CE0E1CC92CD1006C514A /* Reachability.swift */; };
+		C58AB21B1CDC5EEA00ECA50E /* Yelp5.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2111CDC5EEA00ECA50E /* Yelp5.png */; };
+		C58AB21C1CDC5EEA00ECA50E /* Yelp4h.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2121CDC5EEA00ECA50E /* Yelp4h.png */; };
+		C58AB21D1CDC5EEA00ECA50E /* Yelp4.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2131CDC5EEA00ECA50E /* Yelp4.png */; };
+		C58AB21E1CDC5EEA00ECA50E /* Yelp3h.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2141CDC5EEA00ECA50E /* Yelp3h.png */; };
+		C58AB21F1CDC5EEA00ECA50E /* Yelp3.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2151CDC5EEA00ECA50E /* Yelp3.png */; };
+		C58AB2201CDC5EEA00ECA50E /* Yelp2h.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2161CDC5EEA00ECA50E /* Yelp2h.png */; };
+		C58AB2211CDC5EEA00ECA50E /* Yelp2.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2171CDC5EEA00ECA50E /* Yelp2.png */; };
+		C58AB2221CDC5EEA00ECA50E /* Yelp1h.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2181CDC5EEA00ECA50E /* Yelp1h.png */; };
+		C58AB2231CDC5EEA00ECA50E /* Yelp0.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB2191CDC5EEA00ECA50E /* Yelp0.png */; };
+		C58AB2241CDC5EEA00ECA50E /* Yelp1.png in Resources */ = {isa = PBXBuildFile; fileRef = C58AB21A1CDC5EEA00ECA50E /* Yelp1.png */; };
 		C5A5FB251CBEA617001AA4C2 /* YelpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5FB231CBEA617001AA4C2 /* YelpClient.swift */; };
 		C5A5FB261CBEA617001AA4C2 /* Business.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A5FB241CBEA617001AA4C2 /* Business.swift */; };
 		C5CBD8271CBFF07700F08BAB /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CBD8261CBFF07700F08BAB /* CustomTableViewCell.swift */; };
@@ -60,6 +70,16 @@
 		C535C00F1CDB0E0A002A4A80 /* phoShizzleLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phoShizzleLogo.jpg; sourceTree = "<group>"; };
 		C54134241CBDDCAF0051B800 /* DataFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
 		C574CE0E1CC92CD1006C514A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		C58AB2111CDC5EEA00ECA50E /* Yelp5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp5.png; sourceTree = "<group>"; };
+		C58AB2121CDC5EEA00ECA50E /* Yelp4h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp4h.png; sourceTree = "<group>"; };
+		C58AB2131CDC5EEA00ECA50E /* Yelp4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp4.png; sourceTree = "<group>"; };
+		C58AB2141CDC5EEA00ECA50E /* Yelp3h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp3h.png; sourceTree = "<group>"; };
+		C58AB2151CDC5EEA00ECA50E /* Yelp3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp3.png; sourceTree = "<group>"; };
+		C58AB2161CDC5EEA00ECA50E /* Yelp2h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp2h.png; sourceTree = "<group>"; };
+		C58AB2171CDC5EEA00ECA50E /* Yelp2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp2.png; sourceTree = "<group>"; };
+		C58AB2181CDC5EEA00ECA50E /* Yelp1h.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp1h.png; sourceTree = "<group>"; };
+		C58AB2191CDC5EEA00ECA50E /* Yelp0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp0.png; sourceTree = "<group>"; };
+		C58AB21A1CDC5EEA00ECA50E /* Yelp1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Yelp1.png; sourceTree = "<group>"; };
 		C5A5FB231CBEA617001AA4C2 /* YelpClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YelpClient.swift; sourceTree = "<group>"; };
 		C5A5FB241CBEA617001AA4C2 /* Business.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Business.swift; sourceTree = "<group>"; };
 		C5CBD8261CBFF07700F08BAB /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -120,6 +140,7 @@
 		C51B5AB01CBC981200C6F68E /* pho shizzle */ = {
 			isa = PBXGroup;
 			children = (
+				C58AB2101CDC460700ECA50E /* YelpStars */,
 				C5CBD82A1CC03E7300F08BAB /* yelp.png */,
 				C5CBD82B1CC03E7300F08BAB /* zomato.png */,
 				C5CBD82C1CC03E7300F08BAB /* google.png */,
@@ -149,6 +170,23 @@
 				9D9314EE1CDA6ADF00A3B79B /* TestViewController.swift */,
 			);
 			path = "pho shizzle";
+			sourceTree = "<group>";
+		};
+		C58AB2101CDC460700ECA50E /* YelpStars */ = {
+			isa = PBXGroup;
+			children = (
+				C58AB2111CDC5EEA00ECA50E /* Yelp5.png */,
+				C58AB2121CDC5EEA00ECA50E /* Yelp4h.png */,
+				C58AB2131CDC5EEA00ECA50E /* Yelp4.png */,
+				C58AB2141CDC5EEA00ECA50E /* Yelp3h.png */,
+				C58AB2151CDC5EEA00ECA50E /* Yelp3.png */,
+				C58AB2161CDC5EEA00ECA50E /* Yelp2h.png */,
+				C58AB2171CDC5EEA00ECA50E /* Yelp2.png */,
+				C58AB2181CDC5EEA00ECA50E /* Yelp1h.png */,
+				C58AB2191CDC5EEA00ECA50E /* Yelp0.png */,
+				C58AB21A1CDC5EEA00ECA50E /* Yelp1.png */,
+			);
+			name = YelpStars;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,13 +256,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				C51B5ABF1CBC981200C6F68E /* LaunchScreen.storyboard in Resources */,
+				C58AB2241CDC5EEA00ECA50E /* Yelp1.png in Resources */,
+				C58AB2201CDC5EEA00ECA50E /* Yelp2h.png in Resources */,
 				C5CBD82D1CC03E7300F08BAB /* yelp.png in Resources */,
 				C51B5ABC1CBC981200C6F68E /* Assets.xcassets in Resources */,
+				C58AB21B1CDC5EEA00ECA50E /* Yelp5.png in Resources */,
 				C535C00C1CDB0DE5002A4A80 /* zomatoLogo.jpg in Resources */,
+				C58AB21E1CDC5EEA00ECA50E /* Yelp3h.png in Resources */,
 				C5CBD82E1CC03E7300F08BAB /* zomato.png in Resources */,
+				C58AB21F1CDC5EEA00ECA50E /* Yelp3.png in Resources */,
+				C58AB21C1CDC5EEA00ECA50E /* Yelp4h.png in Resources */,
+				C58AB2231CDC5EEA00ECA50E /* Yelp0.png in Resources */,
 				C535C0101CDB0E0A002A4A80 /* phoShizzleLogo.jpg in Resources */,
 				C535C0081CDB0B0E002A4A80 /* ZomatoDetail.png in Resources */,
+				C58AB2211CDC5EEA00ECA50E /* Yelp2.png in Resources */,
 				C535C0061CDB0B02002A4A80 /* yelp-logo-small.png in Resources */,
+				C58AB21D1CDC5EEA00ECA50E /* Yelp4.png in Resources */,
+				C58AB2221CDC5EEA00ECA50E /* Yelp1h.png in Resources */,
 				C5CBD82F1CC03E7300F08BAB /* google.png in Resources */,
 				C535C00A1CDB0DDC002A4A80 /* powered_by_google_on_white.png in Resources */,
 				C535C0041CDB0AFA002A4A80 /* GoogleLogo.png in Resources */,

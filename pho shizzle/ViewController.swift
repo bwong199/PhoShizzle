@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreLocation
-
+import Cosmos
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CLLocationManagerDelegate {
     
@@ -237,8 +237,43 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let pho = GlobalVariables.phoInfoList[indexPath.row]
         
         cell.title.text = "\(pho.name) "
-        cell.subtitle.text = "Zomato: \(pho.rating)    Google: \(pho.gRating)    Yelp: \(pho.yRating)"
+//        cell.subtitle.text = "Zomato: \(pho.rating)    Google: \(pho.gRating)    Yelp: \(pho.yRating)"
+        cell.zomatoStars.rating = Double(pho.rating)!
+     
         
+
+//        if let yelpRating = pho.yRating as? Double {
+//            cell.yelpStars.rating = yelpRating
+//        }
+        
+        switch(pho.yRating){
+        case (1):
+            cell.yelpStars.image = UIImage(named: "Yelp0")
+        case (1.5):
+            cell.yelpStars.image = UIImage(named: "Yelp1h")
+        case (2):
+            cell.yelpStars.image = UIImage(named: "Yelp2")
+        case (2.5):
+            cell.yelpStars.image = UIImage(named: "Yelp2h")
+        case (3):
+            cell.yelpStars.image = UIImage(named: "Yelp3")
+        case (3.5):
+            cell.yelpStars.image = UIImage(named: "Yelp3h")
+        case (4):
+            cell.yelpStars.image = UIImage(named: "Yelp4")
+        case (4.5):
+            cell.yelpStars.image = UIImage(named: "Yelp4h")
+        case (5):
+            cell.yelpStars.image = UIImage(named: "Yelp5")
+        default:
+            break;
+        }
+        
+        if let googleRating = pho.gRating as? Double {
+           cell.googleStars.rating = googleRating
+        }
+  
+
         
         if Int(pho.distanceFromUser) > 100 {
             cell.distance.text = "Unknown"
@@ -249,15 +284,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if Double(pho.rating) >= 4.00 {
             cell.backgroundColor = UIColor.greenColor()
         } else if Double(pho.rating) <= 3.00 {
-            cell.backgroundColor = UIColor.redColor()
+            cell.backgroundColor = UIColor.orangeColor()
             cell.title.textColor = UIColor.whiteColor()
-            cell.subtitle.textColor = UIColor.whiteColor()
+//            cell.subtitle.textColor = UIColor.whiteColor()
             cell.distance.textColor = UIColor.whiteColor()
         }
         else {
             cell.backgroundColor = UIColor.clearColor()
             cell.title.textColor = UIColor.blackColor()
-            cell.subtitle.textColor = UIColor.blackColor()
+//            cell.subtitle.textColor = UIColor.blackColor()
             cell.distance.textColor = UIColor.blackColor()
         }
         

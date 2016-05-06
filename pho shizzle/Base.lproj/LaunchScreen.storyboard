@@ -18,44 +18,41 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoShizzleLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-sW-lmZ">
-                                <rect key="frame" x="177" y="54" width="240" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="rSv-Fu-uUP"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by_google_on_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-MI-wyc">
                                 <rect key="frame" x="252" y="171" width="91" height="58"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="mdO-mu-eBb"/>
+                                    <constraint firstAttribute="width" constant="91" id="GV3-yu-BoW"/>
                                 </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zomatoLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-jr-r1f">
                                 <rect key="frame" x="23" y="152" width="208" height="96"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="208" id="PNQ-mm-19X"/>
-                                </constraints>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yelp_powered_btn_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="byK-Eq-rSi">
                                 <rect key="frame" x="360" y="131" width="217" height="138"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoShizzleLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-sW-lmZ">
+                                <rect key="frame" x="155" y="28" width="271" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="271" id="9rL-lJ-81L"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-3" id="2nj-1g-1WX"/>
-                            <constraint firstItem="byK-Eq-rSi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="111" id="60g-0G-ySX"/>
-                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="centerX" secondItem="7kr-MI-wyc" secondAttribute="centerX" id="9kw-5M-JAJ"/>
-                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="34" id="JaT-vN-WRM"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="151" id="LFZ-8X-UyX"/>
-                            <constraint firstItem="byK-Eq-rSi" firstAttribute="leading" secondItem="7kr-MI-wyc" secondAttribute="trailing" constant="17" id="Oo4-dk-E1t"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="centerY" secondItem="byK-Eq-rSi" secondAttribute="centerY" id="S0Q-3k-tjS"/>
-                            <constraint firstItem="r7i-jr-r1f" firstAttribute="centerY" secondItem="7kr-MI-wyc" secondAttribute="centerY" id="WFM-tI-Wwb"/>
-                            <constraint firstItem="r7i-jr-r1f" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="132" id="cXW-bJ-SJ6"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="byK-Eq-rSi" secondAttribute="trailing" constant="3" id="e4t-gg-rRn"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="byK-Eq-rSi" secondAttribute="bottom" constant="331" id="i8A-q6-2QH"/>
-                            <constraint firstItem="r7i-jr-r1f" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="3" id="ufG-Dr-Hl3"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="leading" secondItem="r7i-jr-r1f" secondAttribute="trailing" constant="21" id="wLT-0i-ukm"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pF3-sW-lmZ" secondAttribute="bottom" constant="418" id="xbk-LL-Awr"/>
+                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-9.5" id="C8G-rc-Rzo"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="byK-Eq-rSi" secondAttribute="bottom" constant="331" id="CJv-qw-HZ6"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pF3-sW-lmZ" secondAttribute="bottom" constant="444" id="GeR-JH-lbc"/>
+                            <constraint firstItem="r7i-jr-r1f" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="3" id="Inb-SJ-meG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="byK-Eq-rSi" secondAttribute="trailing" constant="3" id="OHw-2I-S6t"/>
+                            <constraint firstItem="7kr-MI-wyc" firstAttribute="top" secondItem="pF3-sW-lmZ" secondAttribute="bottom" constant="15" id="SCb-IT-vQV"/>
+                            <constraint firstItem="7kr-MI-wyc" firstAttribute="centerY" secondItem="r7i-jr-r1f" secondAttribute="centerY" id="Te7-kH-IDr"/>
+                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="YNh-1F-Xav"/>
+                            <constraint firstItem="byK-Eq-rSi" firstAttribute="centerY" secondItem="7kr-MI-wyc" secondAttribute="centerY" id="aDk-Lo-h6B"/>
+                            <constraint firstItem="byK-Eq-rSi" firstAttribute="leading" secondItem="7kr-MI-wyc" secondAttribute="trailing" constant="17" id="cRc-uT-RSl"/>
+                            <constraint firstItem="7kr-MI-wyc" firstAttribute="leading" secondItem="r7i-jr-r1f" secondAttribute="trailing" constant="21" id="iLt-of-Fsh"/>
+                            <constraint firstItem="7kr-MI-wyc" firstAttribute="centerX" secondItem="pF3-sW-lmZ" secondAttribute="centerX" constant="7" id="pca-5h-He2"/>
+                            <constraint firstItem="r7i-jr-r1f" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="132" id="sOa-ne-8bh"/>
+                            <constraint firstItem="byK-Eq-rSi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="111" id="vYt-WT-X2M"/>
                         </constraints>
                     </view>
                 </viewController>

@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import CoreData
+import Cosmos
+
 
 class TestViewController: UIViewController {
 var pho : Pho? = nil
@@ -21,11 +23,14 @@ var pho : Pho? = nil
     
     @IBOutlet weak var addressLabel: UILabel!
     
-    @IBOutlet weak var zomatolabel: UILabel!
-   
-    @IBOutlet weak var yelpLabel: UILabel!
+    @IBOutlet var zomatoStars: CosmosView!
+
+    @IBOutlet var zomatoCount: UILabel!
     
-    @IBOutlet weak var googleLabel: UILabel!
+    @IBOutlet var yelpRating: UIImageView!
+    
+    @IBOutlet var yelpCount: UILabel!
+    @IBOutlet var googleStars: CosmosView!
     
     @IBOutlet weak var savePhoButton: UIButton!
     
@@ -40,12 +45,43 @@ var pho : Pho? = nil
         self.testTitleLabel.text = self.pho!.name
         self.phoneLabel.text = String(self.pho!.phoneNumber)
         self.addressLabel.text = self.pho!.address
+        self.zomatoCount.text =   "\(self.pho!.votes) votes"
         
-        self.zomatolabel.text = "\(self.pho!.rating) - \(self.pho!.votes) reviews"
+        self.yelpCount.text =  "\(String(self.pho!.yVotes)) votes"
         
-        self.googleLabel.text = "\(self.pho!.gRating)"
         
-        self.yelpLabel.text = "\(self.pho!.yRating) - \(self.pho!.yVotes) reviews"
+        self.zomatoStars.rating = Double(self.pho!.rating)!
+        
+        self.googleStars.rating = self.pho!.gRating
+        
+        switch(self.pho!.yRating){
+        case (1):
+            self.yelpRating.image = UIImage(named: "Yelp0")
+        case (1.5):
+            self.yelpRating.image = UIImage(named: "Yelp1h")
+        case (2):
+            self.yelpRating.image = UIImage(named: "Yelp2")
+        case (2.5):
+            self.yelpRating.image = UIImage(named: "Yelp2h")
+        case (3):
+            self.yelpRating.image = UIImage(named: "Yelp3")
+        case (3.5):
+            self.yelpRating.image = UIImage(named: "Yelp3h")
+        case (4):
+            self.yelpRating.image = UIImage(named: "Yelp4")
+        case (4.5):
+            self.yelpRating.image = UIImage(named: "Yelp4h")
+        case (5):
+            self.yelpRating.image = UIImage(named: "Yelp5")
+        default:
+            break;
+        }
+        
+//        self.zomatolabel.text = "\(self.pho!.rating) - \(self.pho!.votes) reviews"
+//        
+//        self.googleLabel.text = "\(self.pho!.gRating)"
+//        
+//        self.yelpLabel.text = "\(self.pho!.yRating) - \(self.pho!.yVotes) reviews"
         
         let latitudeAnn:CLLocationDegrees = self.pho!.latitude
         let longitudeAnn:CLLocationDegrees = self.pho!.longitude

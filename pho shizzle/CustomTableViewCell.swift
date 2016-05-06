@@ -7,11 +7,17 @@
 //
 
 import UIKit
+import Cosmos
 
 class CustomTableViewCell : UITableViewCell{
     
     @IBOutlet var title: UILabel!
     @IBOutlet var subtitle: UILabel!
     @IBOutlet var distance: UILabel!
+
+    @IBOutlet var zomatoStars: CosmosView!
+//    @IBOutlet var yelpStars: CosmosView!
+    @IBOutlet var googleStars: CosmosView!
     
+    @IBOutlet var yelpStars: UIImageView!
 }

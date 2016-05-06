@@ -129,7 +129,7 @@ class DataFetch {
                                     }
                                     
                                     
-                                    print("\(phoName) - \(phoLatitudeD) \(phoLongitudeD)")
+//                                    print("\(phoName) - \(phoLatitudeD) \(phoLongitudeD)")
                                     
                                     //                                    print("Pho Distance \(phoName) \(phoDistance)")
                                     

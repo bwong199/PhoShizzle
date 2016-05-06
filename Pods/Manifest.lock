@@ -23,13 +23,19 @@ PODS:
   - BDBOAuth1Manager (1.6.0):
     - AFNetworking/NSURLConnection (~> 2.6.0)
     - AFNetworking/NSURLSession (~> 2.6.0)
+  - Cosmos (1.2.2)
+  - EDStarRating (1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.5)
   - BDBOAuth1Manager
+  - Cosmos (~> 1.2)
+  - EDStarRating
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   BDBOAuth1Manager: cd5a5872f355ca38180d52ca2dd844f0b0c84797
+  Cosmos: 87c49100c69d2cb2eebfa4eb8d1e801fe29ff774
+  EDStarRating: a41a6440a945020745d0e9ff8ada7d1afa952114
 
 COCOAPODS: 0.39.0

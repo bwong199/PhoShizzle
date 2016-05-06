@@ -1,0 +1,1 @@
+ const unsigned char Pods_pho_shizzleVersionString[] __attribute__ ((used)) = "@(#)PROGRAM:Pods_pho_shizzle  PROJECT:Pods-1" "\n"; const double Pods_pho_shizzleVersionNumber __attribute__ ((used)) = (double)1.;

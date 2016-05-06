@@ -86,8 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-pho shizzle/AFNetworking.framework"
   install_framework "Pods-pho shizzle/BDBOAuth1Manager.framework"
+  install_framework "Pods-pho shizzle/Cosmos.framework"
+  install_framework "Pods-pho shizzle/EDStarRating.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-pho shizzle/AFNetworking.framework"
   install_framework "Pods-pho shizzle/BDBOAuth1Manager.framework"
+  install_framework "Pods-pho shizzle/Cosmos.framework"
+  install_framework "Pods-pho shizzle/EDStarRating.framework"
 fi
