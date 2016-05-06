@@ -154,7 +154,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     let searchName = x.name.stringByReplacingOccurrencesOfString(" ", withString: "-")
 
                     print(searchName)
-                    Business.searchWithTerm(searchName, sort: YelpSortMode.BestMatched, categories: ["vietnamese"], deals: false,  completion: { (businesses: [Business]!, error: NSError!) -> Void in
+                    Business.searchWithTerm(x.name, sort: YelpSortMode.Distance, categories: ["vietnamese"], deals: false,  completion: { (businesses: [Business]!, error: NSError!) -> Void in
                         self.businesses = businesses
                         
                         if businesses != nil {
@@ -165,7 +165,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                                 
                                 for x in GlobalVariables.phoInfoList {
                                     
-                                    if x.name.lowercaseString.substringToIndex(x.name.startIndex.advancedBy(2)) == business.name!.lowercaseString.substringToIndex(business.name!.startIndex.advancedBy(2))
+                                    if x.name.lowercaseString.substringToIndex(x.name.startIndex.advancedBy(5)) == business.name!.lowercaseString.substringToIndex(business.name!.startIndex.advancedBy(5))
                                         //
                                         //                                                                    &&  x.address.lowercaseString.substringToIndex(x.address.startIndex.advancedBy(1)) == business.address!.lowercaseString.substringToIndex(business.address!.startIndex.advancedBy(1))
                                     {

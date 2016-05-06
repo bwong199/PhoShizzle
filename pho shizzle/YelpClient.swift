@@ -59,7 +59,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
         // For additional parameters, see http://www.yelp.com/developers/documentation/v2/search_api
         
         // Default the location to San Francisco
-        var parameters: [String : AnyObject] = ["term": term, "cll": "\(GlobalVariables.restLatitude),\(GlobalVariables.restLongitude)", "location": "\(GlobalVariables.restAddress)"]
+        var parameters: [String : AnyObject] = ["term": term, "cll": "\(GlobalVariables.restLatitude),\(GlobalVariables.restLongitude)", "location": "\(GlobalVariables.restAddress)", "radius_filter": 1000]
         
         if sort != nil {
             parameters["sort"] = sort!.rawValue
@@ -73,7 +73,7 @@ class YelpClient: BDBOAuth1RequestOperationManager {
             parameters["deals_filter"] = deals!
         }
         //
-        //        print(parameters)
+                print(parameters)
         
         return self.GET("search", parameters: parameters, success: { (operation: AFHTTPRequestOperation!, response: AnyObject!) -> Void in
             let dictionaries = response["businesses"] as? [NSDictionary]
