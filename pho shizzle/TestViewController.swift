@@ -23,7 +23,8 @@ var pho : Pho? = nil
     
     @IBOutlet weak var addressLabel: UILabel!
     
-    @IBOutlet var zomatoStars: CosmosView!
+    
+    @IBOutlet var zomatoRating: UILabel!
 
     @IBOutlet var zomatoCount: UILabel!
     
@@ -58,9 +59,11 @@ var pho : Pho? = nil
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        print(pho?.latitude)
-        print(pho?.longitude)
-        print(pho?.mobileURL);
+//        print(pho?.latitude)
+//        print(pho?.longitude)
+//        print(pho?.mobileURL);
+        print("Zomato Postal Code \(pho?.postalCode)")
+        print("Yelp Postal Code \(pho?.yPostalCode)");
         
         self.testTitleLabel.text = self.pho!.name
         self.phoneLabel.text = String(self.pho!.phoneNumber)
@@ -72,7 +75,7 @@ var pho : Pho? = nil
         self.yelpCount.text =  "\(String(self.pho!.yVotes)) votes"
         
         
-        self.zomatoStars.rating = Double(self.pho!.rating)!
+        self.zomatoRating.text = self.pho!.rating
         
         self.googleStars.rating = self.pho!.gRating
         
@@ -141,7 +144,7 @@ var pho : Pho? = nil
             let results = try context.executeFetchRequest(request)
             
             if results.count > 0 {
-                print(results)
+//                print(results)
                 self.savePhoButton.hidden = true
                 
                 for result in results as! [NSManagedObject] {

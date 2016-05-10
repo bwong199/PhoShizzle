@@ -9,9 +9,13 @@
 import UIKit
 
 class GlobalVariables {
+    
     static var phoInfoList : [Pho] = []
     static var userLatitude : Double = 0.0
     static var userLongitude : Double = 0.0
     static var restLatitude : Double = 0.0
     static var restLongitude : Double = 0.0
-    static var restAddress : String = ""}
+    static var restAddress : String = ""
+    static var restNeighbourhood : String = ""
+
+}

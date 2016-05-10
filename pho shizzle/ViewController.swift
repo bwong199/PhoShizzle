@@ -62,7 +62,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func refreshTable(sender:AnyObject) {
         // Code to refresh table view
         
-
+        
         
         // check connection before reloading data
         if Reachability.isConnectedToNetwork() == true {
@@ -148,52 +148,95 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                     GlobalVariables.restLatitude = x.latitude
                     GlobalVariables.restLongitude = x.longitude
                     GlobalVariables.restAddress = x.address
+                    GlobalVariables.restNeighbourhood = x.neighbourhood
                     
                     // print("\(x.name) \(x.rating) \(x.gRating)")
                     
                     let searchName = x.name.stringByReplacingOccurrencesOfString(" ", withString: "-")
-
-                    print(searchName)
+                    
+//                    print(searchName)
                     Business.searchWithTerm(x.name, sort: YelpSortMode.Distance, categories: ["vietnamese"], deals: false,  completion: { (businesses: [Business]!, error: NSError!) -> Void in
                         self.businesses = businesses
                         
                         if businesses != nil {
-                        if let businesses = businesses  as? [Business] {
-                            for business in businesses {
-                                
-//                                print(business)
-                                
-                                for x in GlobalVariables.phoInfoList {
+                            if let businesses = businesses  as? [Business] {
+                                for business in businesses {
                                     
-                                    if x.name.lowercaseString.substringToIndex(x.name.startIndex.advancedBy(5)) == business.name!.lowercaseString.substringToIndex(business.name!.startIndex.advancedBy(5))
-                                        //
-                                        //                                                                    &&  x.address.lowercaseString.substringToIndex(x.address.startIndex.advancedBy(1)) == business.address!.lowercaseString.substringToIndex(business.address!.startIndex.advancedBy(1))
-                                    {
-                                        //                                    print("\(business.name!) \(business.address!) \(business.rating!)")
-                                        if let phoneNumber = business.phoneNumber  {
-                                            x.phoneNumber = phoneNumber
+                                    
+                                    
+                                    for x in GlobalVariables.phoInfoList {
+                                        
+                                        if x.name.characters.count > 5 {
+                                            if x.name.lowercaseString.substringToIndex(x.name.startIndex.advancedBy(5)) == business.name!.lowercaseString.substringToIndex(business.name!.startIndex.advancedBy(5))
+                                                
+//                                                &&  x.postalCode.lowercaseString.substringToIndex(x.address.startIndex.advancedBy(2)) == business.yPostalCode!.lowercaseString.substringToIndex(business.address!.startIndex.advancedBy(2))
+                                            {
+//                                                                                    print("\(business.name!) \(business.address!) \(business.rating!)")
+//                                                if let phoneNumber = business.phoneNumber  {
+//                                                    x.phoneNumber = phoneNumber
+//                                                    
+//                                                }
+//                                                
+//                                                x.mobileURL = business.mobileURL!
+//                                                
+//                                                x.yRating = Double(business.rating!)
+//                                                x.yVotes = Int(business.reviewCount!)
+
+                                                
+                                                if let yPostalCode = business.yPostalCode {
+
+                                                    if yPostalCode.characters.count > 2 && x.postalCode.characters.count > 2 {
+                                                        if x.postalCode.lowercaseString.substringToIndex(x.postalCode.startIndex.advancedBy(2)) == yPostalCode.lowercaseString.substringToIndex(yPostalCode.startIndex.advancedBy(2)) {
+                                                            
+                                                            x.yPostalCode = yPostalCode
+                                                            
+                                                            if let phoneNumber = business.phoneNumber  {
+                                                                x.phoneNumber = phoneNumber
+                                                                
+                                                            }
+                                                            
+                                                            x.mobileURL = business.mobileURL!
+                                                            
+                                                            x.yRating = Double(business.rating!)
+                                                            x.yVotes = Int(business.reviewCount!)
+                                                            print("\(business.name)  Yelp: \(business.yPostalCode) Zomato: \(x.postalCode)")
+                                                            
+                                                        }
+                                                    }
+                                                    
+                                                }
+                                                
+                                                
+                                            }
+                                        } else {
+                                            if let phoneNumber = business.phoneNumber  {
+                                                x.phoneNumber = phoneNumber
+                                                
+                                            }
                                             
+                                            x.mobileURL = business.mobileURL!
+                                            if let postalCode = business.yPostalCode {
+                                                x.yPostalCode = postalCode
+                                            }
+                                            
+                                            x.yRating = Double(business.rating!)
+                                            x.yVotes = Int(business.reviewCount!)
                                         }
                                         
-                                        x.mobileURL = business.mobileURL!
                                         
-                                        x.yRating = Double(business.rating!)
-                                        x.yVotes = Int(business.reviewCount!)
-                                        //                                        x.phoneNumber = business.phoneNumber!
                                     }
                                 }
                             }
-                        }
-                        else
-                        {
-                            dispatch_async(dispatch_get_main_queue(), {
-                                let alertController = UIAlertController(title: nil, message:
-                                    "Failed to Download Data from Yelp", preferredStyle: UIAlertControllerStyle.Alert)
-                                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
-                                
-                                //                    self.presentViewController(alertController, animated: true, completion: nil)
-                            })
-                        }
+                            else
+                            {
+                                dispatch_async(dispatch_get_main_queue(), {
+                                    let alertController = UIAlertController(title: nil, message:
+                                        "Failed to Download Data from Yelp", preferredStyle: UIAlertControllerStyle.Alert)
+                                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                                    
+                                    //                    self.presentViewController(alertController, animated: true, completion: nil)
+                                })
+                            }
                         } else {
                             print ("no businesses")
                         }
@@ -240,62 +283,61 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
+        
+        
         let cell = tableView.dequeueReusableCellWithIdentifier(basicCellIdentifier) as! CustomTableViewCell
-        //        cell.textLabel!.text = product.title
-        //                        cell.textLabel!.text = "Nike kicks"
+
         let pho = GlobalVariables.phoInfoList[indexPath.row]
         
         cell.title.text = "\(pho.name) "
-//        cell.subtitle.text = "Zomato: \(pho.rating)    Google: \(pho.gRating)    Yelp: \(pho.yRating)"
-//        cell.zomatoStars.rating = Double(pho.rating)!
-     
+        //        cell.subtitle.text = "Zomato: \(pho.rating)    Google: \(pho.gRating)    Yelp: \(pho.yRating)"
+        //        cell.zomatoStars.rating = Double(pho.rating)!
+        
 
 
-//        if let yelpRating = pho.yRating as? Double {
-//            cell.yelpStars.rating = yelpRating
-//        }
+        
+        //        if let yelpRating = pho.yRating as? Double {
+        //            cell.yelpStars.rating = yelpRating
+        //        }
+        
+        cell.zomatoRating.text = pho.rating
+        cell.zomatoCount.text = pho.votes
+        
+        switch(pho.yRating){
+        case (0):
+            cell.yelpStars.image = UIImage(named: "Yelp0")
+        case (1):
+            cell.yelpStars.image = UIImage(named: "Yelp1")
+        case (1.5):
+            cell.yelpStars.image = UIImage(named: "Yelp1h")
+        case (2):
+            cell.yelpStars.image = UIImage(named: "Yelp2")
+        case (2.5):
+            cell.yelpStars.image = UIImage(named: "Yelp2h")
+        case (3):
+            cell.yelpStars.image = UIImage(named: "Yelp3")
+        case (3.5):
+            cell.yelpStars.image = UIImage(named: "Yelp3h")
+        case (4):
+            cell.yelpStars.image = UIImage(named: "Yelp4")
+        case (4.5):
+            cell.yelpStars.image = UIImage(named: "Yelp4h")
+        case (5):
+            cell.yelpStars.image = UIImage(named: "Yelp5")
+        default:
+            break;
+            
+        }
+        cell.yelpCount.text = String(pho.yVotes)
+        
+        if let googleRating = pho.gRating as? Double {
+            cell.googleStars.rating = googleRating
+        }
         
         
-     
-            
-            cell.zomatoStars.rating = Double(pho.rating)!
-            cell.zomatoCount.text = pho.votes
-            
-            switch(pho.yRating){
-            case (0):
-                cell.yelpStars.image = UIImage(named: "Yelp0")
-            case (1):
-                cell.yelpStars.image = UIImage(named: "Yelp1")
-            case (1.5):
-                cell.yelpStars.image = UIImage(named: "Yelp1h")
-            case (2):
-                cell.yelpStars.image = UIImage(named: "Yelp2")
-            case (2.5):
-                cell.yelpStars.image = UIImage(named: "Yelp2h")
-            case (3):
-                cell.yelpStars.image = UIImage(named: "Yelp3")
-            case (3.5):
-                cell.yelpStars.image = UIImage(named: "Yelp3h")
-            case (4):
-                cell.yelpStars.image = UIImage(named: "Yelp4")
-            case (4.5):
-                cell.yelpStars.image = UIImage(named: "Yelp4h")
-            case (5):
-                cell.yelpStars.image = UIImage(named: "Yelp5")
-            default:
-                break;
-                
-            }
-            cell.yelpCount.text = String(pho.yVotes)
-            
-            if let googleRating = pho.gRating as? Double {
-                cell.googleStars.rating = googleRating
-            }
-    
-
-
-  
-
+        
+        
+        
         
         if Int(pho.distanceFromUser) > 100 {
             cell.distance.text = "Unknown"
@@ -308,13 +350,13 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         } else if Double(pho.rating) <= 3.00 {
             cell.backgroundColor = UIColor.orangeColor()
             cell.title.textColor = UIColor.whiteColor()
-//            cell.subtitle.textColor = UIColor.whiteColor()
+            //            cell.subtitle.textColor = UIColor.whiteColor()
             cell.distance.textColor = UIColor.whiteColor()
         }
         else {
             cell.backgroundColor = UIColor.clearColor()
             cell.title.textColor = UIColor.blackColor()
-//            cell.subtitle.textColor = UIColor.blackColor()
+            //            cell.subtitle.textColor = UIColor.blackColor()
             cell.distance.textColor = UIColor.blackColor()
         }
         

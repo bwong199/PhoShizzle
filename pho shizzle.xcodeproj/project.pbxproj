@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F089B1FB19FBDEA4455B479 /* Pods_pho_shizzle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F0B262BB3C6F0F4AB311ED6 /* Pods_pho_shizzle.framework */; };
 		9D9314EF1CDA6ADF00A3B79B /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9314EE1CDA6ADF00A3B79B /* TestViewController.swift */; };
+		C50B20831CE2301100582FFE /* zomatoLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = C50B20821CE2301100582FFE /* zomatoLogo.png */; };
 		C51B5AB21CBC981200C6F68E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B5AB11CBC981200C6F68E /* AppDelegate.swift */; };
 		C51B5AB41CBC981200C6F68E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51B5AB31CBC981200C6F68E /* ViewController.swift */; };
 		C51B5AB71CBC981200C6F68E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C51B5AB51CBC981200C6F68E /* Main.storyboard */; };
@@ -21,7 +22,7 @@
 		C535C0061CDB0B02002A4A80 /* yelp-logo-small.png in Resources */ = {isa = PBXBuildFile; fileRef = C535C0051CDB0B02002A4A80 /* yelp-logo-small.png */; };
 		C535C0081CDB0B0E002A4A80 /* ZomatoDetail.png in Resources */ = {isa = PBXBuildFile; fileRef = C535C0071CDB0B0E002A4A80 /* ZomatoDetail.png */; };
 		C535C00A1CDB0DDC002A4A80 /* powered_by_google_on_white.png in Resources */ = {isa = PBXBuildFile; fileRef = C535C0091CDB0DDC002A4A80 /* powered_by_google_on_white.png */; };
-		C535C00C1CDB0DE5002A4A80 /* zomatoLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C535C00B1CDB0DE5002A4A80 /* zomatoLogo.jpg */; };
+		C535C00C1CDB0DE5002A4A80 /* zomatoLogoLauncher.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C535C00B1CDB0DE5002A4A80 /* zomatoLogoLauncher.jpg */; };
 		C535C00E1CDB0E03002A4A80 /* yelp_powered_btn_dark.png in Resources */ = {isa = PBXBuildFile; fileRef = C535C00D1CDB0E03002A4A80 /* yelp_powered_btn_dark.png */; };
 		C535C0101CDB0E0A002A4A80 /* phoShizzleLogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C535C00F1CDB0E0A002A4A80 /* phoShizzleLogo.jpg */; };
 		C54134251CBDDCAF0051B800 /* DataFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54134241CBDDCAF0051B800 /* DataFetch.swift */; };
@@ -51,6 +52,7 @@
 		420C35ACE4CCEFD5978CF6F0 /* Pods-pho shizzle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pho shizzle.release.xcconfig"; path = "Pods/Target Support Files/Pods-pho shizzle/Pods-pho shizzle.release.xcconfig"; sourceTree = "<group>"; };
 		743F9B86C56C86B39A6CC448 /* Pods-pho shizzle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pho shizzle.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pho shizzle/Pods-pho shizzle.debug.xcconfig"; sourceTree = "<group>"; };
 		9D9314EE1CDA6ADF00A3B79B /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		C50B20821CE2301100582FFE /* zomatoLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = zomatoLogo.png; sourceTree = "<group>"; };
 		C51B5AAE1CBC981200C6F68E /* pho shizzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pho shizzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51B5AB11CBC981200C6F68E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C51B5AB31CBC981200C6F68E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		C535C0051CDB0B02002A4A80 /* yelp-logo-small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "yelp-logo-small.png"; sourceTree = "<group>"; };
 		C535C0071CDB0B0E002A4A80 /* ZomatoDetail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZomatoDetail.png; sourceTree = "<group>"; };
 		C535C0091CDB0DDC002A4A80 /* powered_by_google_on_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = powered_by_google_on_white.png; sourceTree = "<group>"; };
-		C535C00B1CDB0DE5002A4A80 /* zomatoLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zomatoLogo.jpg; sourceTree = "<group>"; };
+		C535C00B1CDB0DE5002A4A80 /* zomatoLogoLauncher.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zomatoLogoLauncher.jpg; sourceTree = "<group>"; };
 		C535C00D1CDB0E03002A4A80 /* yelp_powered_btn_dark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yelp_powered_btn_dark.png; sourceTree = "<group>"; };
 		C535C00F1CDB0E0A002A4A80 /* phoShizzleLogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = phoShizzleLogo.jpg; sourceTree = "<group>"; };
 		C54134241CBDDCAF0051B800 /* DataFetch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFetch.swift; sourceTree = "<group>"; };
@@ -145,13 +147,14 @@
 				C5CBD82B1CC03E7300F08BAB /* zomato.png */,
 				C5CBD82C1CC03E7300F08BAB /* google.png */,
 				C535C0071CDB0B0E002A4A80 /* ZomatoDetail.png */,
+				C50B20821CE2301100582FFE /* zomatoLogo.png */,
 				C535C0051CDB0B02002A4A80 /* yelp-logo-small.png */,
 				C5A5FB231CBEA617001AA4C2 /* YelpClient.swift */,
 				C535C0091CDB0DDC002A4A80 /* powered_by_google_on_white.png */,
 				C535C0031CDB0AFA002A4A80 /* GoogleLogo.png */,
 				C5A5FB241CBEA617001AA4C2 /* Business.swift */,
 				C51B5AB11CBC981200C6F68E /* AppDelegate.swift */,
-				C535C00B1CDB0DE5002A4A80 /* zomatoLogo.jpg */,
+				C535C00B1CDB0DE5002A4A80 /* zomatoLogoLauncher.jpg */,
 				C51B5AC81CBCA89F00C6F68E /* GlobalVariables.swift */,
 				C51B5AC61CBCA38100C6F68E /* Pho.swift */,
 				C51B5AB31CBC981200C6F68E /* ViewController.swift */,
@@ -261,7 +264,7 @@
 				C5CBD82D1CC03E7300F08BAB /* yelp.png in Resources */,
 				C51B5ABC1CBC981200C6F68E /* Assets.xcassets in Resources */,
 				C58AB21B1CDC5EEA00ECA50E /* Yelp5.png in Resources */,
-				C535C00C1CDB0DE5002A4A80 /* zomatoLogo.jpg in Resources */,
+				C535C00C1CDB0DE5002A4A80 /* zomatoLogoLauncher.jpg in Resources */,
 				C58AB21E1CDC5EEA00ECA50E /* Yelp3h.png in Resources */,
 				C5CBD82E1CC03E7300F08BAB /* zomato.png in Resources */,
 				C58AB21F1CDC5EEA00ECA50E /* Yelp3.png in Resources */,
@@ -278,6 +281,7 @@
 				C535C0041CDB0AFA002A4A80 /* GoogleLogo.png in Resources */,
 				C51B5AB71CBC981200C6F68E /* Main.storyboard in Resources */,
 				C535C00E1CDB0E03002A4A80 /* yelp_powered_btn_dark.png in Resources */,
+				C50B20831CE2301100582FFE /* zomatoLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 
 
-// This is an imported YELP library 
+// This is an imported YELP library
 class Business: NSObject {
     let name: String?
     let address: String?
@@ -21,6 +21,7 @@ class Business: NSObject {
     let rating: Double?
     let phoneNumber: String?
     let mobileURL: String?
+    let yPostalCode: String?
     
     init(dictionary: NSDictionary) {
         name = dictionary["name"] as? String
@@ -33,6 +34,9 @@ class Business: NSObject {
         }
         
         let location = dictionary["location"] as? NSDictionary
+        
+        yPostalCode = location!["postal_code"] as? String
+        
         var address = ""
         if location != nil {
             let addressArray = location!["address"] as? NSArray
@@ -85,7 +89,8 @@ class Business: NSObject {
         phoneNumber = dictionary["display_phone"] as? String
         
         mobileURL = dictionary["mobile_url"] as? String
-
+        
+        
     }
     
     class func businesses(array array: [NSDictionary]) -> [Business] {

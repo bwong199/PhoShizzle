@@ -18,41 +18,45 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by_google_on_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="7kr-MI-wyc">
-                                <rect key="frame" x="252" y="171" width="91" height="58"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoShizzleLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="orf-pg-VFs">
+                                <rect key="frame" x="180" y="38" width="240" height="128"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="GV3-yu-BoW"/>
+                                    <constraint firstAttribute="width" constant="240" id="JXh-Ev-5us"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zomatoLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="r7i-jr-r1f">
-                                <rect key="frame" x="23" y="152" width="208" height="96"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yelp_powered_btn_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="byK-Eq-rSi">
-                                <rect key="frame" x="360" y="131" width="217" height="138"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoShizzleLogo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="pF3-sW-lmZ">
-                                <rect key="frame" x="155" y="28" width="271" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="powered_by_google_on_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="SPG-y6-kaW">
+                                <rect key="frame" x="256" y="160" width="89" height="48"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="271" id="9rL-lJ-81L"/>
+                                    <constraint firstAttribute="width" constant="89" id="Cl7-dc-Ih2"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zomatoLogoLauncher.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-tv-NBy">
+                                <rect key="frame" x="20" y="160" width="101" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="101" id="CdZ-rV-tUa"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="yelp_powered_btn_dark.png" translatesAutoresizingMaskIntoConstraints="NO" id="rTd-fk-1uk">
+                                <rect key="frame" x="480" y="165" width="100" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="zai-X5-nvY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" constant="-9.5" id="C8G-rc-Rzo"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="byK-Eq-rSi" secondAttribute="bottom" constant="331" id="CJv-qw-HZ6"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="pF3-sW-lmZ" secondAttribute="bottom" constant="444" id="GeR-JH-lbc"/>
-                            <constraint firstItem="r7i-jr-r1f" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="3" id="Inb-SJ-meG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="byK-Eq-rSi" secondAttribute="trailing" constant="3" id="OHw-2I-S6t"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="top" secondItem="pF3-sW-lmZ" secondAttribute="bottom" constant="15" id="SCb-IT-vQV"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="centerY" secondItem="r7i-jr-r1f" secondAttribute="centerY" id="Te7-kH-IDr"/>
-                            <constraint firstItem="pF3-sW-lmZ" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="YNh-1F-Xav"/>
-                            <constraint firstItem="byK-Eq-rSi" firstAttribute="centerY" secondItem="7kr-MI-wyc" secondAttribute="centerY" id="aDk-Lo-h6B"/>
-                            <constraint firstItem="byK-Eq-rSi" firstAttribute="leading" secondItem="7kr-MI-wyc" secondAttribute="trailing" constant="17" id="cRc-uT-RSl"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="leading" secondItem="r7i-jr-r1f" secondAttribute="trailing" constant="21" id="iLt-of-Fsh"/>
-                            <constraint firstItem="7kr-MI-wyc" firstAttribute="centerX" secondItem="pF3-sW-lmZ" secondAttribute="centerX" constant="7" id="pca-5h-He2"/>
-                            <constraint firstItem="r7i-jr-r1f" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="132" id="sOa-ne-8bh"/>
-                            <constraint firstItem="byK-Eq-rSi" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="111" id="vYt-WT-X2M"/>
+                            <constraint firstItem="rTd-fk-1uk" firstAttribute="centerY" secondItem="ayc-tv-NBy" secondAttribute="centerY" id="72T-kJ-ZY0"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="SPG-y6-kaW" secondAttribute="bottom" constant="392" id="8mz-Pe-SAp"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="ayc-tv-NBy" secondAttribute="bottom" constant="388" id="BxS-kU-2Gs"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="orf-pg-VFs" secondAttribute="bottom" constant="434" id="Dqf-en-t4K"/>
+                            <constraint firstItem="ayc-tv-NBy" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="140" id="KEl-FX-a78"/>
+                            <constraint firstItem="orf-pg-VFs" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="N1Q-6y-Qrj"/>
+                            <constraint firstItem="rTd-fk-1uk" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="145" id="Ou5-Z1-pIv"/>
+                            <constraint firstItem="SPG-y6-kaW" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="140" id="U4G-Nh-CVX"/>
+                            <constraint firstItem="rTd-fk-1uk" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailingMargin" id="fvt-oH-xQ8"/>
+                            <constraint firstItem="SPG-y6-kaW" firstAttribute="centerX" secondItem="orf-pg-VFs" secondAttribute="centerX" id="w3t-Ik-A4S"/>
+                            <constraint firstItem="ayc-tv-NBy" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" id="wFk-7G-egU"/>
+                            <constraint firstItem="orf-pg-VFs" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="18" id="ywv-R7-xsy"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -65,6 +69,6 @@
         <image name="phoShizzleLogo.jpg" width="640" height="326"/>
         <image name="powered_by_google_on_white.png" width="144" height="18"/>
         <image name="yelp_powered_btn_dark.png" width="194" height="45"/>
-        <image name="zomatoLogo.jpg" width="161" height="72"/>
+        <image name="zomatoLogoLauncher.jpg" width="161" height="72"/>
     </resources>
 </document>

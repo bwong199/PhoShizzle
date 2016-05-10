@@ -15,7 +15,8 @@ class CustomTableViewCell : UITableViewCell{
     @IBOutlet var subtitle: UILabel!
     @IBOutlet var distance: UILabel!
 
-    @IBOutlet var zomatoStars: CosmosView!
+    
+    @IBOutlet var zomatoRating: UILabel!
 //    @IBOutlet var yelpStars: CosmosView!
     @IBOutlet var googleStars: CosmosView!
     

@@ -77,6 +77,16 @@ class DataFetch {
                                         continue
                                     }
                                     newPho.postalCode = postalCode
+                                    guard let city = restaurant["location"]!["city"] as? String else{
+                                        continue
+                                    }
+                                    newPho.city = city
+                                    
+                                    guard let neighbourhood = restaurant["location"]!["address"] as? String else{
+                                        continue
+                                    }
+                                    
+                                    newPho.neighbourhood = neighbourhood
                                     
                                     guard let phoAddress = restaurant["location"]!["address"] as? String else{
                                         continue
@@ -98,18 +108,19 @@ class DataFetch {
                                     var missingLongitude : Double = 0
                                     
                                     let geocoder = CLGeocoder()
-                                    if phoLatitude == "0.0000000000" && phoLongitude == "0.0000000000" {
-                                        geocoder.geocodeAddressString(phoAddress, completionHandler: {(placemarks, error) -> Void in
+                                    if phoLatitude == "0.0000000000" && phoLongitude == "0.0000000000" || postalCode.isEmpty {
+                                        geocoder.geocodeAddressString("\(phoAddress) \(city)", completionHandler: {(placemarks, error) -> Void in
                                             if((error) != nil){
                                                 print("Error", error)
                                             }
                                             if let placemark = placemarks?.first {
+//                                                print(placemark)
                                                 let coordinates:CLLocationCoordinate2D = placemark.location!.coordinate
                                                 //                                                print("Geocoded first \(coordinates.latitude) \(coordinates.longitude)")
                                                 phoLatitudeD = coordinates.latitude
                                                 phoLongitudeD = coordinates.longitude
                                                 //                        
-                                                print("Geocoded second \(phoLatitudeD) \(phoLongitudeD)")
+//                                                print("Geocoded second \(phoLatitudeD) \(phoLongitudeD)")
                                                 
                                                 missingLatitude = coordinates.latitude
                                                 missingLongitude = coordinates.longitude
@@ -117,7 +128,8 @@ class DataFetch {
                                                 newPho.latitude = missingLatitude
                                                 newPho.longitude = missingLongitude
                                                 
-                                                print("\(newPho.name) \(newPho.latitude) \(newPho.longitude)")
+                                                
+//                                                print("\(newPho.name) \(newPho.latitude) \(newPho.longitude)")
                                                 
                                                 let userLocation:CLLocation = CLLocation(latitude: GlobalVariables.userLatitude, longitude: GlobalVariables.userLongitude)
                                                 let phoLocation:CLLocation = CLLocation(latitude: phoLatitudeD!, longitude: phoLongitudeD!)
@@ -126,7 +138,10 @@ class DataFetch {
                                                 
                                                 newPho.distanceFromUser = phoDistance / 1000
                                                 
+                                                newPho.postalCode = placemark.postalCode!
+                                                print("Estimated Postal Code \(placemark.postalCode!)")
                                                 GlobalVariables.phoInfoList.sortInPlace()
+                                                
                                             }
                                         })
                                     } else {
@@ -143,7 +158,7 @@ class DataFetch {
                                         GlobalVariables.phoInfoList.sortInPlace()
                                     }
                                     
-                                    
+//                                    print("\(phoName) \(postalCode)")
 //                                    print("\(phoName) - \(phoLatitudeD) \(phoLongitudeD)")
                                     
 //                                      print("Pho Distance \(phoName) \(newPho.latitude) \(newPho.longitude) \(newPho.distanceFromUser)")

@@ -14,6 +14,7 @@ class Pho : Comparable{
     var name = ""
     var address = ""
     var postalCode = ""
+    var yPostalCode = ""
     var phoneNumber = ""
     var rating = ""
     var votes = ""
@@ -25,6 +26,8 @@ class Pho : Comparable{
     var yRating = 0.00
     var yVotes = 0
     var mobileURL = ""
+    var city = ""
+    var neighbourhood = ""
     
     init(){
         

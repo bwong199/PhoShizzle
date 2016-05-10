@@ -33,12 +33,12 @@ class DetailViewController: UIViewController  {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        print(pho?.mobileURL);
-        print(pho?.zURL)
-        
-        // We need just to get the documents folder url
-        let documentsUrl =  NSFileManager.defaultManager().URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first!
-        
+//        print(pho?.mobileURL);
+//        print(pho?.zURL)
+        print(pho?.postalCode)
+        print(pho?.yPostalCode);
+    
+     
         
         
         
